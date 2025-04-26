@@ -1,0 +1,39 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    date: "Enero 2024 - Actualidad",
+    title: "Coordinación y Organización",
+    company: "Congreso de seguridad informática Sh3llcon",
+    description:
+      "Soy parte del equipo organizador de Sh3llCON, un congreso anual de seguridad informática que reúne a la comunidad para compartir conocimientos en ciberseguridad ofensiva y defensiva. Contribuyo en la planificación y coordinación general del evento, promoviendo un espacio de aprendizaje, intercambio y crecimiento profesional.",
+  },
+  {
+    date: "Marzo 2024 - Junio 2024",
+    title: "Técnico informático",
+    company: "INFORTEC Asistencia Técnica S.L.",
+    description:
+      "Técnico informático en INFORTEC, brindando soporte técnico, mantenimiento de sistemas y soluciones a medida para optimizar el rendimiento tecnológico de empresas y usuarios.",
+  },
+  
+];
+---
+
+<div class="relative max-md:mt-0 mt-8" aria-label="Professional experience">
+  <ol class="relative mt-10">
+    {
+      EXPERIENCE.map((experience, index) => (
+        <li class="">
+          <article role="article" aria-labelledby={`experience-title-${index}`}>
+            <div
+              class="flex flex-col gap-2  text-zinc-00 dark:text-zinc-300 md:col-span-3"
+              aria-describedby={`experience-title-${index}`}
+            >
+              <ExperienceItem {...experience} />
+            </div>
+          </article>
+        </li>
+      ))
+    }
+  </ol>
+</div>

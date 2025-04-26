@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Experience from "../components/portfolio/Experience.astro";
+import Competiciones from "../components/portfolio/Competiciones.astro";
+import HeroIndex from "../components/portfolio/HeroIndex.astro";
+import Contact from "../components/portfolio/Contact.astro";
+import ListProjects from "../components/portfolio/ListProjects.astro";
+import Heading from "../components/ui/Heading.astro";
+import { Icon } from "astro-icon/components";
+
+const pageTitle = "Santiago Montenegro || Cibersecurity Researcher";
+const description = "Soy Santiago Montenegro, apasionado por la ciberseguridad, ciberinteligencia y el trabajo en nube.";
+const ogimage = {
+  url: "/images/imagedefault.webp",
+  alt: "Screenshot de un portafolio web moderno y oscuro...",
+};
+---
+
+<Layout pageTitle={pageTitle} description={description} ogimage={ogimage}>
+  <HeroIndex />
+
+  <!-- Sección de Experiencia -->
+  <section class="py-12 px-8 max-md:py-6 scroll-m-16 bg-gradient-to-t dark:from-[#0e0e10] from-[#fff] from-50% to-transparent to-100%" id="experience">
+    <div class="flex flex-col gap-6 max-w-7xl mx-auto">
+      <div class="flex gap-4 items-center justify-center text-center mb-8">
+        <Icon class="text-3xl dark:text-white text-blacktext" name="mdi:briefcase" />
+        <Heading textGradient="Experiencia" level={2} class="text-3xl font-bold" />
+      </div>
+      <Experience />
+    </div>
+  </section>
+
+  <!-- Sección de Competiciones -->
+  <section class="py-12 px-8 max-md:py-6 scroll-m-16 bg-gradient-to-t dark:from-[#0e0e10] from-[#fff] from-50% to-transparent to-100%" id="competicion">
+    <div class="flex flex-col gap-6 max-w-7xl mx-auto">
+      <div class="flex gap-4 items-center justify-center text-center mb-8">
+        <Icon class="text-3xl dark:text-white text-blacktext" name="mdi:trophy" />
+        <Heading textGradient="Competiciones" level={2} class="text-3xl font-bold" />
+      </div>
+      <Competiciones />
+    </div>
+  </section>
+
+  <!-- Sección de Proyectos -->
+  <section class="py-12 px-8 max-md:py-6 scroll-m-16 bg-gradient-to-t dark:from-[#0e0e10] from-[#fff] from-50% to-transparent to-100%" id="projects">
+    <div class="flex flex-col gap-6 max-w-7xl mx-auto">
+      <div class="flex gap-4 items-center justify-center text-center mb-8">
+        <Icon class="text-3xl dark:text-white text-blacktext" name="mdi:code-tags" />
+        <Heading textGradient="Proyectos" level={2} class="text-3xl font-bold" />
+      </div>
+      <ListProjects />
+    </div>
+  </section>
+
+  <!-- Sección de Contacto -->
+  <Contact />
+</Layout>

@@ -1,0 +1,105 @@
+---
+// Lista COMPLETA de tecnologías ordenadas alfabéticamente con nombres correctamente capitalizados
+const technologies = [
+  { id: "aircrack-ng", name: "Aircrack-ng", color: "#000000", textColor: "#FF0000", icon: "📶" },
+  { id: "aws", name: "AWS", color: "#FF9900", textColor: "#000000", icon: "☁️" },
+  { id: "aws-cli", name: "AWS CLI", color: "#232F3E", textColor: "#FFFFFF", icon: "💻" },
+  { id: "aws-cloudformation", name: "AWS CloudFormation", color: "#5D3B8C", textColor: "#FFFFFF", icon: "📜" },
+  { id: "aws-ec2", name: "Amazon EC2", color: "#FF9900", textColor: "#000000", icon: "🖥️" },
+  { id: "aws-iam", name: "AWS IAM", color: "#D93A21", textColor: "#FFFFFF", icon: "👤" },
+  { id: "aws-lambda", name: "AWS Lambda", color: "#FA7F17", textColor: "#000000", icon: "λ" },
+  { id: "aws-rds", name: "Amazon RDS", color: "#2E7D32", textColor: "#FFFFFF", icon: "🗄️" },
+  { id: "aws-s3", name: "Amazon S3", color: "#4D27A8", textColor: "#FFFFFF", icon: "📦" },
+  { id: "aws-vpc", name: "Amazon VPC", color: "#1E5A96", textColor: "#FFFFFF", icon: "🌐" },
+  { id: "bash", name: "Bash", color: "#4EAA25", textColor: "#FFFFFF", icon: "💲" },
+  { id: "burpsuite", name: "Burp Suite", color: "#1A1A1A", textColor: "#FF6633", icon: "🧪" },
+  { id: "caido", name: "Caido", color: "#00B4AB", textColor: "#FFFFFF", icon: "🛰️" },
+  { id: "docker", name: "Docker", color: "#2496ED", textColor: "#FFFFFF", icon: "🐳" },
+  { id: "git", name: "Git", color: "#F05032", textColor: "#FFFFFF", icon: "🐙" },
+  { id: "holehe", name: "Holehe", color: "#563D7C", textColor: "#FFFFFF", icon: "✉️" },
+  { id: "immunity-debugger", name: "Immunity Debugger", color: "#1A1A1A", textColor: "#FF8C00", icon: "🛠️" },
+  { id: "kali-linux", name: "Kali Linux", color: "#557C94", textColor: "#FFFFFF", icon: "🐉" },
+  { id: "maltego", name: "Maltego", color: "#000000", textColor: "#00FF00", icon: "🟢" },
+  { id: "metasploit", name: "Metasploit", color: "#E62B2B", textColor: "#FFFFFF", icon: "⚔️" },
+  { id: "nmap", name: "Nmap", color: "#000000", textColor: "#FF6600", icon: "🗺️" },
+  { id: "pimeyes", name: "PimEyes", color: "#0F4C81", textColor: "#FFFFFF", icon: "👁️" },
+  { id: "powershell", name: "PowerShell", color: "#012456", textColor: "#FFFFFF", icon: "⏩" },
+  { id: "python", name: "Python", color: "#3776AB", textColor: "#FFD43B", icon: "🐍" },
+  { id: "sherlock", name: "Sherlock", color: "#FF4136", textColor: "#FFFFFF", icon: "🔍" },
+  { id: "sqlmap", name: "sqlmap", color: "#000000", textColor: "#D4D4D4", icon: "🗃️" },
+  { id: "wireshark", name: "Wireshark", color: "#1679A7", textColor: "#FFFFFF", icon: "📡" }
+].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<div class="technologies-container">
+  {technologies.map((tech) => (
+    <div 
+      class="tech-pill"
+      style={`
+        background-color: ${tech.color};
+        color: ${tech.textColor};
+        border: 1px solid ${tech.color}88;
+        ${tech.id.includes('aws') ? 'border-left: 3px solid #FF9900;' : ''}
+      `}
+    >
+      <span class="tech-icon">{tech.icon}</span>
+      {tech.name}
+      {tech.id.includes('aws') && <span class="aws-badge">AWS</span>}
+    </div>
+  ))}
+</div>
+
+<style>
+  .technologies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    padding: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .tech-pill {
+    padding: 0.5rem 1rem 0.5rem 0.8rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .tech-icon {
+    margin-right: 8px;
+    font-size: 1.1em;
+    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
+  }
+
+  .tech-pill:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .aws-badge {
+    margin-left: 8px;
+    background: #FF9900;
+    color: #000;
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    font-size: 0.7em;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .technologies-container {
+      gap: 0.6rem;
+      padding: 1rem;
+    }
+    .tech-pill {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+    }
+  }
+</style>
