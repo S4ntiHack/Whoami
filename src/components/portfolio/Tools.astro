@@ -1,50 +1,71 @@
 ---
+// Importaciones
+import Heading from "../ui/Heading.astro";
+import { Icon } from "astro-icon/components";
+
+// Tecnologías con colores suavizados
 const technologies = [
-  { id: "aircrack-ng", name: "Aircrack-ng", color: "#E3E4E6", textColor: "#333333" },
-  { id: "bash", name: "Bash", color: "#B8E2C8", textColor: "#333333" },
-  { id: "burpsuite", name: "Burp Suite", color: "#FF6633", textColor: "#FFFFFF" },
-  { id: "chisel", name: "Chisel", color: "#6EC4DB", textColor: "#333333" },
-  { id: "docker", name: "Docker", color: "#9ACFE8", textColor: "#333333" },
-  { id: "gobuster", name: "Gobuster", color: "#7E57C2", textColor: "#FFFFFF" },
-  { id: "immunity-debugger", name: "Immunity Debugger", color: "#8A2BE2", textColor: "#FFFFFF" },
-  { id: "joomscan", name: "JoomScan", color: "#FF5722", textColor: "#FFFFFF" },
-  { id: "metasploit", name: "Metasploit", color: "#E74C3C", textColor: "#FFFFFF" },
-  { id: "netcat", name: "Netcat", color: "#3498DB", textColor: "#FFFFFF" },
-  { id: "nmap", name: "Nmap", color: "#1A237E", textColor: "#FFFFFF" },
-  { id: "python", name: "Python", color: "#F2CF97", textColor: "#333333" },
-  { id: "sqlmap", name: "SQLMap", color: "#FFA500", textColor: "#333333" },
-  { id: "wfuzz", name: "Wfuzz", color: "#4CAF50", textColor: "#FFFFFF" },
-  { id: "wireshark", name: "Wireshark", color: "#94C9E0", textColor: "#333333" },
-  { id: "wpscan", name: "WPScan", color: "#4B8BBE", textColor: "#FFFFFF" },
-  { id: "aws", name: "AWS", color: "#F7C08A", textColor: "#333333" },
-  { id: "aws-cli", name: "AWS CLI", color: "#A7BBCD", textColor: "#333333" },
-  { id: "aws-cloudformation", name: "AWS CloudFormation", color: "#C6A6D5", textColor: "#333333" },
-  { id: "aws-ec2", name: "Amazon EC2", color: "#F4D3BA", textColor: "#333333" },
-  { id: "aws-iam", name: "AWS IAM", color: "#E0AFA0", textColor: "#333333" },
-  { id: "aws-lambda", name: "AWS Lambda", color: "#F2C57C", textColor: "#333333" },
-  { id: "aws-rds", name: "Amazon RDS", color: "#AEC3B0", textColor: "#333333" },
-  { id: "aws-s3", name: "Amazon S3", color: "#C1A4DD", textColor: "#333333" },
-  { id: "aws-vpc", name: "Amazon VPC", color: "#A4C1DD", textColor: "#333333" }
-].sort((a, b) => a.name.localeCompare(b.name));
+  // Herramientas de seguridad (no AWS)
+  { id: "aircrack-ng", name: "Aircrack-ng", color: "#F0F2F5", textColor: "#4A5568" },
+  { id: "bash", name: "Bash", color: "#E6F7ED", textColor: "#2D3748" },
+  { id: "burpsuite", name: "Burp Suite", color: "#FFEDE5", textColor: "#9B2C2C" },
+  { id: "chisel", name: "Chisel", color: "#E6F7F9", textColor: "#2C5282" },
+  { id: "docker", name: "Docker", color: "#EBF8FF", textColor: "#2B6CB0" },
+  { id: "gobuster", name: "Gobuster", color: "#F3E8FF", textColor: "#6B46C1" },
+  { id: "immunity-debugger", name: "Immunity Debugger", color: "#F0E7FF", textColor: "#553C9A" },
+  { id: "joomscan", name: "JoomScan", color: "#FFF5F5", textColor: "#C53030" },
+  { id: "metasploit", name: "Metasploit", color: "#FFF5F5", textColor: "#9B2C2C" },
+  { id: "netcat", name: "Netcat", color: "#EBF8FF", textColor: "#2C5282" },
+  { id: "nmap", name: "Nmap", color: "#EBF4FF", textColor: "#434190" },
+  { id: "python", name: "Python", color: "#FFF7E6", textColor: "#B7791F" },
+  { id: "sqlmap", name: "SQLMap", color: "#FFFAE6", textColor: "#B7791F" },
+  { id: "wfuzz", name: "Wfuzz", color: "#F0FFF4", textColor: "#276749" },
+  { id: "wireshark", name: "Wireshark", color: "#E6FFFA", textColor: "#2C7A7B" },
+  { id: "wpscan", name: "WPScan", color: "#EBF8FF", textColor: "#2B6CB0" },
+  
+  // Tecnologías AWS (tonos pastel)
+  { id: "aws", name: "AWS", color: "#FFF7E6", textColor: "#DD6B20" },
+  { id: "aws-cli", name: "AWS CLI", color: "#F0F9FF", textColor: "#4C8BF5" },
+  { id: "aws-cloudformation", name: "AWS CloudFormation", color: "#F5F0FF", textColor: "#805AD5" },
+  { id: "aws-ec2", name: "Amazon EC2", color: "#FFF5E6", textColor: "#DD6B20" },
+  { id: "aws-iam", name: "AWS IAM", color: "#FFF0F0", textColor: "#C53030" },
+  { id: "aws-lambda", name: "AWS Lambda", color: "#FFF7E6", textColor: "#DD6B20" },
+  { id: "aws-rds", name: "Amazon RDS", color: "#F0FFF4", textColor: "#38A169" },
+  { id: "aws-s3", name: "Amazon S3", color: "#F0F7FF", textColor: "#4299E1" },
+  { id: "aws-vpc", name: "Amazon VPC", color: "#EBF4FF", textColor: "#667EEA" }
+].sort((a, b) => {
+  // Ordenar alfabéticamente pero AWS al final
+  const isAWS = (tech) => tech.id.includes('aws');
+  if (isAWS(a) && !isAWS(b)) return 1;
+  if (!isAWS(a) && isAWS(b)) return -1;
+  return a.name.localeCompare(b.name);
+});
 ---
 
-<div class="technologies-container">
-  {technologies.map((tech) => (
-    <div 
-      class="tech-pill"
-      style={`
-        background-color: ${tech.color};
-        color: ${tech.textColor};
-        border: 1px solid ${tech.color}88;
-        ${tech.id.includes('aws') ? 'border-left: 3px solid #FF9900;' : ''}
-      `}
-    >
-      <span class="tech-icon">{tech.icon}</span>
-      {tech.name}
-      {tech.id.includes('aws') && <span class="aws-badge">AWS</span>}
+<!-- Resto del código se mantiene igual -->
+<section class="scroll-m-16 px-8 max-sm:px-4 py-8" id="technologies">
+  <div class="mx-auto max-w-7xl">
+    <div class="technologies-container">
+      {technologies.map((tech) => (
+        <div 
+          class="tech-pill"
+          style={`
+            background-color: ${tech.color};
+            color: ${tech.textColor};
+            border: 1px solid ${tech.color}88;
+            ${tech.id.includes('aws') ? 'border-left: 3px solid #F6AD55;' : ''}
+          `}
+        >
+          <span class="tech-icon">
+            <Icon name={tech.icon || 'code'} />
+          </span>
+          {tech.name}
+          {tech.id.includes('aws') && <span class="aws-badge">AWS</span>}
+        </div>
+      ))}
     </div>
-  ))}
-</div>
+  </div>
+</section>
 
 <style>
   .technologies-container {
@@ -63,7 +84,7 @@ const technologies = [
     font-size: 0.95rem;
     display: inline-flex;
     align-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     transition: all 0.3s ease;
     font-family: 'Inter', system-ui, sans-serif;
   }
@@ -71,22 +92,23 @@ const technologies = [
   .tech-icon {
     margin-right: 8px;
     font-size: 1.1em;
-    filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
+    opacity: 0.8;
   }
 
   .tech-pill:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   }
 
   .aws-badge {
     margin-left: 8px;
-    background: #FF9900;
-    color: #000;
+    background: #F6AD55;
+    color: #7B341E;
     padding: 0.1em 0.4em;
     border-radius: 4px;
     font-size: 0.7em;
     font-weight: bold;
+    border: 1px solid #ED8936;
   }
 
   @media (max-width: 768px) {
