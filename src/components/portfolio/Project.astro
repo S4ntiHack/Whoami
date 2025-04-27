@@ -10,10 +10,10 @@ const { url, title, description, date, languages, image } = Astro.props;
       class="w-full h-48 object-cover"
     />
     <div class="p-4">
-      <h3 class="text-xl font-bold mb-2">{title}</h3>
+      <h3 class="text-xl font-bold text-white mb-2">{title}</h3>
 
-      <!-- ✅ Fecha con " - Actualidad" -->
-      <p class="text-xs text-gray-400">
+      <!-- ✅ Fecha más grande con " - Actualidad" -->
+      <p class="text-base text-gray-400">
         {new Date(date).toISOString().split("T")[0]} - Actualidad
       </p>
 
