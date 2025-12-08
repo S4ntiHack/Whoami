@@ -35,7 +35,17 @@ const technologies = [
   { id: "aws-lambda", name: "AWS Lambda", color: "#C45C0D", textColor: "#FFFFFF" }, // Naranja quemado
   { id: "aws-rds", name: "Amazon RDS", color: "#046C4E", textColor: "#FFFFFF" }, // Verde esmeralda
   { id: "aws-s3", name: "Amazon S3", color: "#1A3E8C", textColor: "#FFFFFF" }, // Azul marino
-  { id: "aws-vpc", name: "Amazon VPC", color: "#5D2D9D", textColor: "#FFFFFF" }  // Púrpura real
+  { id: "aws-vpc", name: "Amazon VPC", color: "#5D2D9D", textColor: "#FFFFFF" }, // Púrpura real
+  { id: "aws-cloudwatch", name: "AWS CloudWatch", color: "#2ca02c", textColor: "#FFFFFF" }, // Verde
+  { id: "aws-ecs", name: "Amazon ECS", color: "#ff7f0e", textColor: "#FFFFFF" }, // Naranja
+  { id: "aws-cloudtrail", name: "AWS CloudTrail", color: "#8c564b", textColor: "#FFFFFF" }, // Marrón
+  { id: "aws-guardduty", name: "AWS GuardDuty", color: "#d62728", textColor: "#FFFFFF" }, // Rojo
+  { id: "aws-codecommit", name: "AWS CodeCommit", color: "#1f77b4", textColor: "#FFFFFF" }, // Azul
+  { id: "aws-codedeploy", name: "AWS CodeDeploy", color: "#9467bd", textColor: "#FFFFFF" }, // Púrpura
+  { id: "aws-cloud9", name: "AWS Cloud9", color: "#00aeef", textColor: "#FFFFFF" }, // Azul cielo
+  { id: "aws-bedrock", name: "Amazon Bedrock", color: "#9b59b6", textColor: "#FFFFFF" }, // Púrpura IA
+  { id: "aws-sagemaker", name: "Amazon SageMaker", color: "#3498db", textColor: "#FFFFFF" } // Azul ML
+
 ].sort((a, b) => {
   // Ordenar alfabéticamente pero AWS al final
   const isAWS = (tech) => tech.id.includes('aws');
