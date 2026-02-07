@@ -32,7 +32,7 @@ Soy **Santiago Montenegro**, apasionado por la **ciberseguridad ofensiva** y la 
 
 ## 🎓 Formación Académica
 - **Grado Superior en Administración de Sistemas Informáticos en Red (ASIR) - En curso**<br>
-- **Grado Medio en Sistemas Microinformáticos y Redes (SMR)***<br>
+- **Grado Medio en Sistemas Microinformáticos y Redes (SMR)**<br>
 
 ## Certificaciones y insignias 
 
