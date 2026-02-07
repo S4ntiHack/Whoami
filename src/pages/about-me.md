@@ -15,7 +15,7 @@ Soy **Santiago Montenegro**, apasionado por la **ciberseguridad ofensiva** y la 
 ## 🛠️ Habilidades Técnicas
 
 ### Seguridad Ofensiva (Red Team)
-* **Pentesting & Auditoría:** Explotación de vulnerabilidades y análisis de seguridad con **Metasploit**, ****, **Burp Suite** y **Nmap**.
+* **Pentesting & Auditoría:** Explotación de vulnerabilidades y análisis de seguridad con **Metasploit**, **Nmap**, **Burp Suite**, etc.
 * **Wireless Security:** Auditoría de redes inalámbricas mediante **Aircrack-ng** y análisis de tráfico con **Wireshark**.
 * **Offensive Scripting:** Desarrollo de herramientas personalizadas y automatización de tareas utilizando **Python** y **Bash**.
 
@@ -30,7 +30,6 @@ Soy **Santiago Montenegro**, apasionado por la **ciberseguridad ofensiva** y la 
 * **Gestión de Datos:** Administración de bases de datos (**RDS/SQL**) asegurando la integridad, disponibilidad y seguridad de la información.
 * **Servicios e Infraestructura:** Implementación de servicios de red y aplicaciones web en entornos multiplataforma y virtualizados.
 
----
 
 ### 🎓 Formación Académica
 - **Grado Superior en Administración de Sistemas Informáticos en Red (ASIR)**<br>
