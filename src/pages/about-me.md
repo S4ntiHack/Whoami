@@ -30,15 +30,13 @@ Soy **Santiago Montenegro**, apasionado por la **ciberseguridad ofensiva** y la 
 * **Gestión de Datos:** Administración de bases de datos (**RDS/SQL**) asegurando la integridad, disponibilidad y seguridad de la información.
 * **Servicios e Infraestructura:** Implementación de servicios de red y aplicaciones web en entornos multiplataforma y virtualizados.
 
-
-### 🎓 Formación Académica
+## 🎓 Formación Académica
 - **Grado Superior en Administración de Sistemas Informáticos en Red (ASIR)**<br>
 - **Grado Medio en Sistemas Microinformáticos y Redes (SMR)***<br>
 
+## Certificaciones y insignias 
 
-### Certificaciones y insignias 
-
-## Hacking Ético
+### Hacking Ético
 - [Web Penetration Tester (eWPT)](https://certs.ine.com/f8dcd964-c569-4d50-8518-5f7e9aa42707#acc.folhg8IV)
 - [Hacking WIFI](https://www.udemy.com/certificate/UC-ae991d3a-9e5c-41c7-89b5-95cd7f3ec4b9/)
 - [Junior Penetration Tester (eJPT)](https://certs.ine.com/29311510-a52d-4bf5-97df-a4956bdc8013#acc.tSvqu4jg)
@@ -46,7 +44,7 @@ Soy **Santiago Montenegro**, apasionado por la **ciberseguridad ofensiva** y la 
 - [Introducción a Hacking](https://www.credential.net/f442c358-a61b-4fc8-87e8-3fbe13ceefb6?username=santiagooffsec11)
 - [Introducción a Linux](https://www.credential.net/49ad29e0-3ea4-452f-8475-273e1037d646?username=santiagooffsec11)
 
-## Cloud Computing
+### Cloud Computing
 - [AWS Certified Cloud Practitioner (CLF-C02)](https://www.credly.com/badges/9c3aab82-a20d-4c07-869c-f88808ef6d7c/linked_in_profile)
 - [AWS Cloud Web Application Builder](https://www.credly.com/badges/e05c210a-b18c-4c75-b575-6e9a33060d61/linked_in_profile)
 - [AWS Cloud Quest: Generative AI Practitioner](https://www.credly.com/badges/c1147529-1f00-41e6-8ebc-65ba72e6c8ca/linked_in_profile)
