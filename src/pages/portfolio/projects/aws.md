@@ -9,7 +9,7 @@ image:
   alt: "Thumbnail of Astro arches."
 --- 
 
-Este es un proyecto personal orientado a aprendizaje sobre automatización de infraestructuras en la nube tanto con scripts (AWS Cli) como IaC (AWS CloudFormation). <br>
+Este es un proyecto personal orientado al aprendizaje sobre automatización de infraestructuras en la nube tanto con scripts (AWS Cli) como IaC (AWS CloudFormation). <br>
 
 [Proyecto de Cloud Computing](https://github.com/S4ntiHack/Cloud)
 
